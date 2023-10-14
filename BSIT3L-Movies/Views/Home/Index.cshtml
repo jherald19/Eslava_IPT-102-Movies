@@ -83,112 +83,15 @@ h1{
   <h1>Movies</h1>
   <center>
 <div class="grid-container">
-  <div class="image-container">
-    <img src="/images/titanic.png" alt="Image 1">
-    </br> </br>
-     <a href="/movies/getmovie/1">More Info</a> 
-    
-  </div>
- 
-
-
-  <div class="image-container">
-    <img src="/images/inception.jpg" alt="Image 1">
-    </br> </br>
-     <a href="/movies/getmovie/2">More Info</a> 
-  </div>
- 
-
-
-  <div class="image-container">
-    <img src="/images/shawshanks.jpg" alt="Image 1">
-    </br> </br>
-     <a href="/movies/getmovie/3">More Info</a> 
-  </div>
-
-
-  <div class="image-container">
-    <img src="/images/scream.jpg" alt="Image 1">
-   </br> </br>
-     <a href="/movies/getmovie/4">More Info</a> 
-  </div>
-
-
-  <div class="image-container">
-    <img src="/images/talktome.jpg" alt="Image 1">
-    </br> </br>
-     <a href="/movies/getmovie/5">More Info</a> 
-  </div>
-
-
-  <div class="image-container">
-    <img src="/images/thebatman.jpg" alt="Image 1">
-    </br> </br>
-     <a href="/movies/getmovie/6">More Info</a> 
-  </div>
-
-
-  <div class="image-container">
-    <img src="/images/babylon.jpg" alt="Image 1">
-    </br> </br>
-     <a href="/movies/getmovie/7">More Info</a> 
-  </div>
-
-
-  <div class="image-container">
-    <img src="/images/dontworrydarling.jpg" alt="Image 1">
-    </br> </br>
-     <a href="/movies/getmovie/8">More Info</a> 
-  </div>
-
-
-  <div class="image-container">
-    <img src="/images/themenu.jpg" alt="Image 1">
-    </br> </br>
-     <a href="/movies/getmovie/9">More Info</a> 
-  </div>
-
-
-  <div class="image-container">
-    <img src="/images/pearl.jpg" alt="Image 1">
-    </br> </br>
-     <a href="/movies/getmovie/10">More Info</a> 
-  </div>
-
-
-  <div class="image-container">
-    <img src="/images/forrestgump.jpg" alt="Image 1">
-    </br> </br>
-     <a href="/movies/getmovie/11">More Info</a> 
-  </div>
-
-
-  <div class="image-container">
-    <img src="/images/thematrix.jpg" alt="Image 1">
-    </br> </br>
-     <a href="/movies/getmovie/12">More Info</a> 
-  </div>
-
-
-  <div class="image-container">
-    <img src="/images/thesilentlambs.jpg" alt="Image 1">
-   </br> </br>
-     <a href="/movies/getmovie/13">More Info</a> 
-  </div>
-
-
+  @foreach (var movie in Model)
+  {
     <div class="image-container">
-    <img src="/images/gladiator.jpg" alt="Image 1">
-    </br> </br>
-     <a href="/movies/getmovie/14">More Info</a> 
-  </div>
-
-
-    <div class="image-container">
-    <img src="/images/thedeparted.jpg" alt="Image 1">
-    </br> </br>
-     <a href="/movies/getmovie/15">More Info</a> 
-  </div>
+      <img src="@Url.Content(movie.Imgg)" alt="Image 1">
+      <br> 
+      <br>
+      <a href="/movies/getmovie/@movie.Id">More Info</a>
+    </div>
+  }
 </div>
 </center>
 
