@@ -1,31 +1,199 @@
 ﻿@model List<MovieViewModel>
 
+
 @{
     ViewData["Title"] = "Home Page";
 }
 
+<!DOCTYPE html>
+<html>
+<head>
+<style>
 
-<table>
-    <thead>
-        <tr>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Rating</th>
-            <th>Release Year</th>
-            <th>Genre</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var movie in Model)
-        {
-            <tr>
-                <td>@movie.Id</td>
-                <td ><a href = "/movies/getmovie/@movie.Id" > @movie.Name </a></td>
-                <td>@movie.Rating</td>
-                <td>@movie.ReleaseYear</td>
-                <td>@movie.Genre</td>
-            </tr>
+ 
+  body{
+    background-color: rgb(2, 188, 239);
+  }
+  .grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px; /* Adjust the gap as needed */
+
+  }
+
+
+  .image-container {
+    width: 220px; /* Adjust the width and height as needed */
+    height: 400px;
+    overflow: hidden;
+  }
+
+
+  .image-container img {
+    max-width: 100%;
+    transition: none;
+     box-shadow: 0 8px 16px 0 white;
+    border-radius: 15px;
+      
+  }
+
+
+  .image-container:hover img {
+    transform: none;
+    
+  }
+
+
+    .image-container:hover h1 {
+    color: #FF5733;
+  }
+
+
+
+a {
+            position: relative;
+            background: transparent;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 1.0em;
+            letter-spacing: 0.1em;
+            font-weight: 400;
+            padding: 2px 8px;
+            transition: 0.5s;
+            color: white;
+            border-radius: 6px;
+
+
+
         }
-    </tbody>
-</table>
+a:hover{
+  color: black;
+  letter-spacing: 0.2em;
+}
+h1{
+  font-size: 30px;
+  color:white;
+  padding-bottom: 20px;
+}
+
+</style>
+</head>
+<body>
+  <h1>Movies</h1>
+  <center>
+<div class="grid-container">
+  <div class="image-container">
+    <img src="/images/titanic.png" alt="Image 1">
+    </br> </br>
+     <a href="/movies/getmovie/1">More Info</a> 
+    
+  </div>
+ 
+
+
+  <div class="image-container">
+    <img src="/images/inception.jpg" alt="Image 1">
+    </br> </br>
+     <a href="/movies/getmovie/2">More Info</a> 
+  </div>
+ 
+
+
+  <div class="image-container">
+    <img src="/images/shawshanks.jpg" alt="Image 1">
+    </br> </br>
+     <a href="/movies/getmovie/3">More Info</a> 
+  </div>
+
+
+  <div class="image-container">
+    <img src="/images/scream.jpg" alt="Image 1">
+   </br> </br>
+     <a href="/movies/getmovie/4">More Info</a> 
+  </div>
+
+
+  <div class="image-container">
+    <img src="/images/talktome.jpg" alt="Image 1">
+    </br> </br>
+     <a href="/movies/getmovie/5">More Info</a> 
+  </div>
+
+
+  <div class="image-container">
+    <img src="/images/thebatman.jpg" alt="Image 1">
+    </br> </br>
+     <a href="/movies/getmovie/6">More Info</a> 
+  </div>
+
+
+  <div class="image-container">
+    <img src="/images/babylon.jpg" alt="Image 1">
+    </br> </br>
+     <a href="/movies/getmovie/7">More Info</a> 
+  </div>
+
+
+  <div class="image-container">
+    <img src="/images/dontworrydarling.jpg" alt="Image 1">
+    </br> </br>
+     <a href="/movies/getmovie/8">More Info</a> 
+  </div>
+
+
+  <div class="image-container">
+    <img src="/images/themenu.jpg" alt="Image 1">
+    </br> </br>
+     <a href="/movies/getmovie/9">More Info</a> 
+  </div>
+
+
+  <div class="image-container">
+    <img src="/images/pearl.jpg" alt="Image 1">
+    </br> </br>
+     <a href="/movies/getmovie/10">More Info</a> 
+  </div>
+
+
+  <div class="image-container">
+    <img src="/images/forrestgump.jpg" alt="Image 1">
+    </br> </br>
+     <a href="/movies/getmovie/11">More Info</a> 
+  </div>
+
+
+  <div class="image-container">
+    <img src="/images/thematrix.jpg" alt="Image 1">
+    </br> </br>
+     <a href="/movies/getmovie/12">More Info</a> 
+  </div>
+
+
+  <div class="image-container">
+    <img src="/images/thesilentlambs.jpg" alt="Image 1">
+   </br> </br>
+     <a href="/movies/getmovie/13">More Info</a> 
+  </div>
+
+
+    <div class="image-container">
+    <img src="/images/gladiator.jpg" alt="Image 1">
+    </br> </br>
+     <a href="/movies/getmovie/14">More Info</a> 
+  </div>
+
+
+    <div class="image-container">
+    <img src="/images/thedeparted.jpg" alt="Image 1">
+    </br> </br>
+     <a href="/movies/getmovie/15">More Info</a> 
+  </div>
+</div>
+</center>
+
+
+</body>
+</html>
+
 
